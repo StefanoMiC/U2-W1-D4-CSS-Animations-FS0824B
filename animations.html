@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./animations.css">
+    <title>CSS Animations</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Animations</h2>
+        <div class="rectangle n1">Animazione con keyframes CLICK ME</div>
+        <div class="rectangle n2">Animazione con keyframes + delay</div>
+        <div class="rectangle n3">Animazione con keyframes fill mode</div>
+    </div>
+
+    <script>
+        const n1 = document.querySelector(".n1")
+        n1.onclick = function () {
+            n1.classList.toggle("active")
+
+            // setTimeout(() => { n1.classList.remove("active") }, 2000)
+        }
+
+
+    </script>
+</body>
+
+</html>

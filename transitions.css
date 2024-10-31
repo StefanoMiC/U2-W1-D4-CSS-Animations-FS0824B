@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin-inline: auto;
+  background-color: #ebebeb;
+  padding: 1rem;
+}
+
+.rectangle {
+  width: 300px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 2px solid black;
+  box-shadow: 0 2px 2px rgb(0 0 0 / 15%);
+}
+
+.n1 {
+  background-color: palevioletred;
+  height: 39px;
+  transition: width 1s, height 50ms, background-color 2s;
+}
+
+.n1:hover {
+  width: 600px;
+  height: 200px;
+  background-color: palegoldenrod;
+}
+
+/* .n1.active {
+  width: 600px;
+  height: 200px;
+  background-color: palegoldenrod;
+} */
+
+.n2 {
+  background-color: palegoldenrod;
+  scale: 0.9;
+  transition: translate 300ms;
+}
+
+.n2:hover {
+  translate: 100px 0px;
+}
+
+.n3 {
+  background-color: paleturquoise;
+  border-radius: 4px;
+  transition: background-color 100ms, scale 200ms, box-shadow 180ms, translate 180ms, border-color 200ms 200ms;
+}
+
+.n3:hover {
+  background-color: hsl(180, 65%, 70%);
+  scale: 1.05;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 30%);
+  translate: 0 -6px;
+  border-color: hsl(180, 65%, 70%);
+}
+
+.card {
+  width: 300px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  margin-inline: auto;
+  margin-top: 3rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.card .img-wrapper {
+  position: relative;
+}
+
+.card .card-body {
+  padding: 1rem;
+  position: absolute;
+}
+
+.card .card-body > * {
+  opacity: 0;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  color: #d9d9d9;
+  letter-spacing: -0.9px;
+  line-height: 0.5;
+  font-size: 1.6rem;
+  transform: translateX(-110%);
+  /* transition in uscita */
+  transition: transform 300ms;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card button {
+  font-family: inherit;
+  background-color: black;
+  color: white;
+  border: none;
+  padding-block: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.card:hover h3 {
+  /* transition in entrata */
+  transition: transform 1.5s cubic-bezier(1, 0, 0, 1.6);
+  transform: translateX(0);
+}
+
+.card:hover .card-body > * {
+  transition: opacity 300ms;
+  opacity: 1;
+}
+
+.card:hover .card-body {
+  position: static;
+}
+
+.card:hover .card-body > p:first-of-type {
+  transition-delay: 1.5s;
+}
+.card:hover .card-body > p:nth-of-type(2) {
+  transition-delay: 1.6s;
+}
+.card:hover .card-body > p:nth-of-type(3) {
+  transition-delay: 1.7s;
+}
+.card:hover .card-body > button {
+  transition-delay: 1.8s;
+}

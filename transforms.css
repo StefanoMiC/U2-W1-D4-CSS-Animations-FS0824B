@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin-inline: auto;
+  background-color: #ebebeb;
+  padding: 1rem;
+  min-height: 70vh;
+}
+
+.rectangle {
+  width: 300px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 2px solid black;
+  box-shadow: 0 2px 2px rgb(0 0 0 / 15%);
+}
+
+.n1,
+.n2,
+.n3 {
+  background-color: palevioletred;
+}
+
+.n1 {
+  transform: translate(10px, 10px);
+}
+
+.n2 {
+  transform: translateX(20px);
+}
+.n3 {
+  transform: translateY(-20px);
+}
+
+.n4,
+.n5,
+.n6 {
+  background-color: palegoldenrod;
+}
+
+.n4 {
+  transform: rotate(4deg);
+  transform-origin: top left;
+}
+
+.n5 {
+  transform: rotateX(60deg);
+  transform-origin: bottom;
+}
+.n6 {
+  transform: rotateY(300deg);
+  transform-origin: left;
+}
+
+.n7,
+.n8,
+.n9 {
+  background-color: palegreen;
+}
+
+.n7 {
+  transform: skew(30deg);
+}
+
+.n8 {
+  transform: skewX(30deg);
+}
+.n9 {
+  transform: skewY(5deg);
+}
+
+.n10,
+.n11,
+.n12 {
+  background-color: paleturquoise;
+}
+
+.n10 {
+  transform: scale(0.8);
+}
+
+.n11 {
+  transform: scaleX(1.05);
+}
+.n12 {
+  transform: scaleY(1.8);
+}
+
+.n13 {
+  background-color: tomato;
+  transform: perspective(1000px) translateZ(300px);
+}
+
+.n14 {
+  background-color: turquoise;
+  margin-top: 2rem;
+  transform: rotateY(62deg);
+}
+
+.n14 div:nth-of-type(1) {
+  background-color: cornflowerblue;
+  transform: rotateY(82deg);
+}
+
+.n14 div:nth-of-type(2) {
+  background-color: chocolate;
+  transform: rotateY(120deg);
+}

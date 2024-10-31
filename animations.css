@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 3s 6s both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    background-color: black;
+    color: white;
+    opacity: 0.75;
+  }
+  78% {
+    background-color: white;
+    color: black;
+    opacity: 0.5;
+  }
+  100% {
+    background-color: black;
+    color: white;
+    opacity: 1;
+  }
+}
+
+.container {
+  max-width: 900px;
+  margin-inline: auto;
+  background-color: #ebebeb;
+  padding: 1rem;
+  height: 500px;
+}
+
+.rectangle {
+  width: 300px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 2px solid black;
+  box-shadow: 0 2px 2px rgb(0 0 0 / 15%);
+}
+
+.n1 {
+  background-color: palevioletred;
+}
+
+.n1.active {
+  animation: rectangleMove 6s 2 alternate cubic-bezier(1, 0.74, 0, 0.56);
+}
+
+.n2 {
+  background-color: palegreen;
+  /* animation: rectangleMove 3s infinite 3s reverse; */
+}
+
+@keyframes rectangleMove {
+  0% {
+    translate: 0px 0px;
+  }
+  25% {
+    translate: 570px;
+  }
+  50% {
+    translate: 570px 340px;
+  }
+  75% {
+    translate: 0px 340px;
+  }
+  100% {
+    translate: 0px 0px;
+  }
+}
+
+.n3 {
+  background-color: paleturquoise;
+  animation: rectangleThree 3s 2 6s both;
+}
+
+@keyframes rectangleThree {
+  0% {
+    background-color: peachpuff;
+  }
+  50% {
+    background-color: palegreen;
+  }
+  100% {
+    background-color: palevioletred;
+  }
+}
